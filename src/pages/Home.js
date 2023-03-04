@@ -1,6 +1,6 @@
 import React from "react";
 import { useFetch } from "../hooks/useFetch.js";
-import { Link } from "react-router-dom";
+import { Link, BrowserRouter } from "react-router-dom";
 import "./Home.css";
 export default function Home() {
   const {
@@ -18,9 +18,9 @@ export default function Home() {
           <div key={article.id} className="card">
             <h3>{article.title}</h3>
             <p>{article.author}</p>
-            <Link to={{ pathname: `/articles/${article.id}` }}>
-              Read More...
-            </Link>
+            <BrowserRouter>
+              <Link to={`articles/${article.id}`}>Read More...</Link>
+            </BrowserRouter>
           </div>
         ))}
     </div>
