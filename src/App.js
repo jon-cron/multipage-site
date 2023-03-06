@@ -1,6 +1,12 @@
 import "./App.css";
 import React from "react";
-import { BrowserRouter, Route, Routes, NavLink } from "react-router-dom";
+import {
+  BrowserRouter,
+  Route,
+  Routes,
+  NavLink,
+  Navigate,
+} from "react-router-dom";
 import Home from "./pages/Home.js";
 import About from "./pages/About.js";
 import Contact from "./pages/Contact.js";
@@ -27,6 +33,8 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route exact path="/articles/:id" element={<Article />} />
+          {/* NOTE this is a catch all that will navigate a user back to the home page if they type a wrong url */}
+          <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </BrowserRouter>
     </div>
