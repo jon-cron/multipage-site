@@ -13,7 +13,8 @@ export default function Article() {
         navigate("/");
       }, 3000);
     }
-  }, [error]);
+    // NOTE remember remember remember to also update your useEffect dependencies!!!
+  }, [error, navigate]);
 
   return (
     <div>
