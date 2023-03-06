@@ -1,6 +1,6 @@
 import React from "react";
 import { useFetch } from "../hooks/useFetch.js";
-import { NavLink, BrowserRouter } from "react-router-dom";
+import { Link, BrowserRouter } from "react-router-dom";
 import "./Home.css";
 export default function Home() {
   const {
@@ -19,7 +19,7 @@ export default function Home() {
             <h3>{article.title}</h3>
             <p>{article.author}</p>
             <BrowserRouter>
-              <NavLink to={`/articles/${article.id}`}>Read More...</NavLink>
+              <Link to={`/articles/${article.id}`}>Read More...</Link>
             </BrowserRouter>
           </div>
         ))}
