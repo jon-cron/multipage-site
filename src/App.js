@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes, NavLink } from "react-router-dom";
 import Home from "./pages/Home.js";
 import About from "./pages/About.js";
 import Contact from "./pages/Contact.js";
+import Article from "./pages/Article.js";
 // NOTE npm install react-router-dom and do the following
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/article/:id" element={<Article />} />
         </Routes>
       </BrowserRouter>
     </div>
